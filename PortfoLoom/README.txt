@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to **PortfoLoom**! This project is a resume and portfolio generator website built using HTML, CSS, and JavaScript. 
+Welcome to PortfoLoom! This project is a resume and portfolio generator website built using HTML, CSS, and JavaScript. 
 The website allows users to create professional resumes and portfolios with ease. 
 The entry point of the project is `hellopage.html` located in the `helloPage` folder. 
 From this page, you can navigate to subsequent pages or access other parts of the website.
