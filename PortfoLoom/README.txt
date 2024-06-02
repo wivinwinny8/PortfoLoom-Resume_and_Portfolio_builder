@@ -78,7 +78,7 @@ Follow these steps to run the project:
    You can download the project as a ZIP file and extract it, or clone the repository using Git.
 
    ```bash
-   git clone https://github.com/PortfoLoom-Resume_and_Portfolio_builder/PortfoLoom.git
+   git clone https://github.com/wivinwinny8/PortfoLoom-Resume_and_Portfolio_builder.git
    ```
 
 2. Navigate to the Project Directory
@@ -91,8 +91,9 @@ Follow these steps to run the project:
    You can do this by double-clicking the file or right-clicking and selecting "Open with" followed by your preferred web browser.
 
    ```bash
-   cd PortfoLoom/helloPage
-   open hellopage.html
+   cd PortfoLoom-Resume_and_Portfolio_builder/PortfoLoom
+   cd helloPage
+   start hellopage.html
    ```
 
 4. **Browse the Website**
@@ -126,4 +127,4 @@ If you encounter any issues:
 
 ---
 
-Thank you for using **PortfoLoom**! We hope you find it useful and enjoyable.
+Thank you for using PortfoLoom! We hope you find it useful and enjoyable.
