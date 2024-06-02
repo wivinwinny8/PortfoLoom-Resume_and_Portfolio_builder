@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="form2style.css">
+<title>User Profile Form</title>
+</head>
+<body>
+    <div class="backbutton" >
+        <button class="backbtn" onclick="window.location.href='/themeSelection/selection.html'">
+            <div class="button-box" >
+              <span class="button-elem">
+                <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                  ></path>
+                </svg>
+              </span>
+              <span class="button-elem">
+                <svg viewBox="0 0 46 40">
+                  <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+          </button>  
+    </div>
+    <img src="template1img.png" alt="" class="templateimg">
+    <p class="selected">Selected Resume Template</p>
+
+<h2>User Profile Form</h2>
+
+<form id="userProfileForm" action="/final/final2.html" method="get" target="_blank">
+    <div class="div">
+        <label for="firstame">First Name:</label>
+        <input class="btn" type="text" id="firstname" name="firstname" placeholder="Bob" required >
+        <label for="lastname">Last Name:</label>
+        <input class="btn" type="text" id="lastname" placeholder="Wright" name="lastname" required>
+    </div>
+
+    <div class="div">
+        <label for="contactNumber">Contact Number:</label>
+        <input class="btn" type="tel" id="contactNumber" name="contactNumber" placeholder="9999-9999" required>
+    </div>
+
+    <div class="div">
+        <label for="role">Current Role:</label>
+        <input class="btn" type="text" id="role" name="role" placeholder="Manager" required>
+    </div>
+
+
+    <div class="div">
+        <label for="email">Email:</label>
+        <input class="btn" type="email" id="email" name="email" placeholder="bob@gmail.com" required>
+    </div>
+
+    <div class="div">
+        <label for="address">Address:</label>
+        <input class="btn" type="text" id="address" name="address" placeholder="Location, State" required>
+    </div>
+
+    <div class="div">
+        <label for="github">GitHub:</label>
+        <input class="btn" type="url" id="github" name="github" placeholder="github.com/bob">
+    </div>
+
+    <div class="div">
+        <label for="linkedin">LinkedIn:</label>
+        <input class="btn" type="url" id="linkedin" name="linkedin" placeholder="linkedin.com/bob">
+    </div>
+
+    <div class="div">
+        <label for="summary">Summary:</label>
+        <textarea class="btn" id="summary" name="summary" placeholder="Tell about yourself..." required></textarea>
+    </div>
+
+    <div class="div">
+        <label for="skills">Skills:</label>
+        <div id="skillsContainer">
+            <input class="btn" type="text" name="skills[]" placeholder="Python" required>
+        </div>
+        <button class="addbtn" type="button" id="addSkill" >Add Skill</button>
+    </div>
+    <div class="div">
+        <label for="experience">Experience:</label>
+        <div id="experienceContainer">
+            <div class="experienceEntry">
+                <input class="btn" type="text" name="experienceDomain[]" placeholder="Company or Domain" required>
+                <input class="btn" type="text" name="experienceTime[]" placeholder="Time range - 2024-2025" required>
+                <input class="btn" type="text" name="experienceBase[]" placeholder="Based on" required>
+                <textarea class="btn" name="experienceSummary[]" placeholder="Summary" required></textarea>
+            </div>
+            <button class="addbtn" type="button" id="addExperience">Add Experience</button>
+        </div>
+    </div>
+
+    <div class="div">
+        <label for="education">Education:</label>
+        <div id="educationContainer">
+            <div class="educationEntry">
+                <input class="btn" type="text" name="degree[]" placeholder="Degree type" required>
+                <input class="btn" type="text" name="university[]" placeholder="College/University" required>
+                <input class="btn" type="text" name="year[]" placeholder="Year - 2024-2025" required>
+                <input class="btn" type="text" name="course[]" placeholder="Course Enrolled" required>
+                <textarea class="btn" name="summary[]" placeholder="Summary" required></textarea>
+            </div>
+            <button class="addbtn" type="button" id="addEducation">Add Education</button>
+        </div>
+    </div>
+
+    <div class="div">
+        <label for="project">Project:</label>
+        <div id="projectContainer">
+            <div class="projectEntry">
+                <input class="btn" type="text" name="projectName[]" placeholder="Project name" required>
+                <textarea class="btn" name="projectSummary[]" placeholder="Summary" required></textarea>
+                <input class="btn" type="url" id="projectid[]" name="projectid[]" placeholder="github.com/project" required>
+            </div>
+            <button class="addbtn" type="button" id="addProject">Add Project</button>
+        </div>
+    </div>
+
+    <div class="div">
+        <label for="certificates">Certifications:</label>
+        <div id="certificatesContainer">
+            <input class="btn" type="text" name="certificates[]" placeholder="Google UI/UX Design" required>
+        </div>
+        <button class="addbtn" type="button" id="addCertificate">Add Certification</button>
+    </div>
+    
+    <div class="div">
+        <label for="languages">Languages Known:</label>
+        <div id="languagesContainer">
+            <input class="btn" type="text" name="languages[]" placeholder="English" required>
+        </div>
+        <button class="addbtn" type="button" id="addLanguage">Add Language</button>
+    </div>
+    <div>
+        <button type="submit" id="submit" class="submitbtn">Submit</button>
+    </div>
+</form>
+
+<script>
+    document.getElementById("addSkill").addEventListener("click", function() {
+        var skillsContainer = document.getElementById("skillsContainer");
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "skills[]";
+        input.required = true;
+        input.setAttribute('class','btn');
+        skillsContainer.appendChild(input);
+    });
+
+    document.getElementById("addEducation").addEventListener("click", function() {
+        var educationContainer = document.getElementById("educationContainer");
+        var educationEntry = document.createElement("div");
+        educationEntry.classList.add("educationEntry");
+        educationEntry.innerHTML = `
+            <input class="btn" type="text" name="degree[]" placeholder="Degree type" required>
+            <input class="btn" type="text" name="university[]" placeholder="College/University" required>
+            <input class="btn" type="text" name="year[]" placeholder="Year - 2024-2025" required>
+            <input class="btn" type="text" name="course[]" placeholder="Course Enrolled" required>
+            <textarea class="btn" name="summary[]" placeholder="Summary" required></textarea>
+        `;
+        educationContainer.insertBefore(educationEntry, document.getElementById("addEducation"));
+    });
+
+    document.getElementById("addExperience").addEventListener("click", function() {
+        var experienceContainer = document.getElementById("experienceContainer");
+        var experienceEntry = document.createElement("div");
+        experienceEntry.classList.add("experienceEntry");
+        experienceEntry.innerHTML = `
+            <input class="btn" type="text" name="experienceDomain[]" placeholder="Company or domain" required>
+            <input class="btn" type="text" name="experienceTime[]" placeholder="Time range - 2024-2025" required>
+            <input class="btn" type="text" name="experienceBase[]" placeholder="Based on" required>
+            <textarea class="btn" name="experienceSummary[]" placeholder="Summary" required></textarea>
+        `;
+        experienceContainer.insertBefore(experienceEntry, document.getElementById("addExperience"));
+    });
+
+    document.getElementById("addProject").addEventListener("click", function() {
+        var projectContainer = document.getElementById("projectContainer");
+        var projectEntry = document.createElement("div");
+        projectEntry.classList.add("projectEntry");
+        projectEntry.innerHTML = `
+            <input class="btn" type="text" name="projectName[]" placeholder="Project name" required>
+            <textarea class="btn" name="projectSummary[]" placeholder="Summary" required></textarea>
+            <input class="btn" type="url" id="projectid[]" name="projectid[]" placeholder="github.com/project" required>
+        `;
+        projectContainer.insertBefore(projectEntry, document.getElementById("addProject"));
+    });
+
+    document.getElementById("addCertificate").addEventListener("click", function() {
+        var certificatesContainer = document.getElementById("certificatesContainer");
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "certificates[]";
+        input.required = true;
+        input.setAttribute('class','btn')
+        certificatesContainer.appendChild(input);
+    });
+
+
+    document.getElementById("addLanguage").addEventListener("click", function() {
+        var languagesContainer = document.getElementById("languagesContainer");
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "languages[]";
+        input.required = true;
+        input.setAttribute('class','btn')
+        languagesContainer.appendChild(input);
+    });
+
+    document.getElementById("submit").addEventListener("click",function(){
+ 
+
+
+        // SKILLS LOCAL STORAGE
+
+        var skillsInputs = document.getElementsByName("skills[]");
+        const skillsValues=[];
+        for(var i = 0; i < skillsInputs.length; ++i){
+            skillsValues.push(skillsInputs[i].value);
+        }
+        console.log(skillsValues);
+        localStorage.setItem('form2skillsValues',JSON.stringify(skillsValues));
+
+        // CERTIFICATES LOCAL STORAGE
+
+        var certificatesInputs = document.getElementsByName("certificates[]");
+        const certificateValues=[];
+        for(var i = 0; i < certificatesInputs.length; ++i){
+            certificateValues.push(certificatesInputs[i].value);
+        }
+        localStorage.setItem('certificatesValues',JSON.stringify( certificateValues));
+
+        // LANGUAGES LOCAL STORAGE
+
+        var languagesInputs = document.getElementsByName("languages[]");
+        const languageValues=[];
+        for(var i = 0; i < languagesInputs.length; ++i){
+            languageValues.push(languagesInputs[i].value);
+        }
+        localStorage.setItem('languagesValues',JSON.stringify(languageValues));
+
+
+
+        // EXPERIENCE LOCAL STORAGE
+
+        var experienceDomainInputs = document.getElementsByName("experienceDomain[]");
+        const experienceDomainValues=[];
+        for(var i = 0; i < experienceDomainInputs.length; ++i){
+            experienceDomainValues.push(experienceDomainInputs[i].value);
+        }
+        console.log(experienceDomainValues);
+        localStorage.setItem('experienceDomainValues',JSON.stringify(experienceDomainValues));
+
+        var experienceTimeInputs = document.getElementsByName("experienceTime[]");
+        const experienceTimeValues=[];
+        for(var i = 0; i < experienceTimeInputs.length; ++i){
+            experienceTimeValues.push(experienceTimeInputs[i].value);
+        }
+        localStorage.setItem('experienceTimeValues',JSON.stringify(experienceTimeValues));
+
+        var experienceBaseInputs = document.getElementsByName("experienceBase[]");
+        const experienceBaseValues=[];
+        for(var i = 0; i < experienceBaseInputs.length; ++i){
+            experienceBaseValues.push(experienceBaseInputs[i].value);
+        }
+        localStorage.setItem('experienceBaseValues',JSON.stringify(experienceBaseValues));
+
+        var experienceSummaryInputs = document.getElementsByName("experienceSummary[]");
+        const experienceSummaryValues=[];
+        for(var i = 0; i < experienceSummaryInputs.length; ++i){
+            experienceSummaryValues.push(experienceSummaryInputs[i].value);
+        }
+        localStorage.setItem('experienceSummaryValues',JSON.stringify(experienceSummaryValues));
+
+
+
+
+
+        // PROJECTS LOCAL STORAGE
+        
+        var projectNameInputs = document.getElementsByName("projectName[]");
+        const projectNameValues=[];
+        for(var i = 0; i < projectNameInputs.length; ++i){
+            projectNameValues.push(projectNameInputs[i].value);
+        }
+        console.log(projectNameValues);
+        localStorage.setItem('projectNameValues',JSON.stringify(projectNameValues));
+
+        var projectSummaryInputs = document.getElementsByName("projectSummary[]");
+        const projectSummaryValues=[];
+        for(var i = 0; i < projectSummaryInputs.length; ++i){
+            projectSummaryValues.push(projectSummaryInputs[i].value);
+        }
+        localStorage.setItem('projectSummaryValues',JSON.stringify(projectSummaryValues));
+        
+        var projectidInputs = document.getElementsByName("projectid[]");
+        const projectidValues=[];
+        for(var i = 0; i < projectidInputs.length; ++i){
+            projectidValues.push(projectidInputs[i].value);
+        }
+        localStorage.setItem('projectidValues',JSON.stringify(projectidValues));
+
+        //education local storage
+        var degreeInputs = document.getElementsByName("degree[]");
+        const degreeValues=[];
+        for(var i = 0; i < degreeInputs.length; ++i){
+            degreeValues.push(degreeInputs[i].value);
+        }
+        console.log(degreeValues);
+        localStorage.setItem('degreeValues',JSON.stringify(degreeValues));
+
+        var universityInputs = document.getElementsByName("university[]");
+        const universityValues=[];
+        for(var i = 0; i < universityInputs.length; ++i){
+            universityValues.push(universityInputs[i].value);
+        }
+        console.log(universityValues);
+        localStorage.setItem('universityValues',JSON.stringify(universityValues));
+
+        var yearInputs = document.getElementsByName("year[]");
+        const yearValues=[];
+        for(var i = 0; i < yearInputs.length; ++i){
+            yearValues.push(yearInputs[i].value);
+        }
+        localStorage.setItem('yearValues',JSON.stringify(yearValues));
+
+        var courseInputs = document.getElementsByName("course[]");
+        const courseValues=[];
+        for(var i = 0; i < courseInputs.length; ++i){
+            courseValues.push(courseInputs[i].value);
+        }
+        localStorage.setItem('courseValues',JSON.stringify(courseValues));
+
+        var summaryInputs = document.getElementsByName("summary[]");
+        const summaryValues=[];
+        for(var i = 0; i < summaryInputs.length; ++i){
+            summaryValues.push(summaryInputs[i].value);
+        }
+        localStorage.setItem('summaryValues',JSON.stringify(summaryValues));
+
+
+
+        var form2fname = document.getElementById("firstname").value;
+        localStorage.setItem("form2fname",form2fname );
+
+        var form2lname = document.getElementById("lastname").value;
+        localStorage.setItem("form2lname",form2lname );
+
+        var form2contactNumberInput = document.getElementById("contactNumber").value;
+        localStorage.setItem("form2contactNumber", form2contactNumberInput);
+
+         var form2emailInput = document.getElementById("email").value;
+        localStorage.setItem("form2email", form2emailInput);
+
+        var form2addressInput = document.getElementById("address").value;
+        localStorage.setItem("form2address", form2addressInput);
+
+        var form2githubInput = document.getElementById("github").value;
+        localStorage.setItem("form2github", form2githubInput);
+
+        var form2linkedinInput = document.getElementById("linkedin").value;
+        localStorage.setItem("form2linkedin", form2linkedinInput);
+
+        var form2summaryInput = document.getElementById("summary").value;
+        localStorage.setItem("form2summary", form2summaryInput);
+
+        var form2roleInput = document.getElementById("role").value;
+        localStorage.setItem("form2crole", form2roleInput);
+    });
+
+        
+       
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio1style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+
+    <div class="download">
+        <button class="download-btn pixel-corners" id="download-btn pixel-corners" onclick="download()">
+            <div class="button-content">
+              <div class="svg-container">
+                <svg
+                  class="download-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479 6.908l-4-4h3v-4h2v4h3l-4 4z"
+                  ></path>
+                </svg>
+              </div>
+              
+              <div class="text-container">
+                <div class="text">Download</div>
+              </div>
+            </div>
+          </button> 
+    </div>
+
+    <header class="maintab">
+        <h1 class="mainname"><span class="fname"></span> <span class="lname"></span></h1>
+        <ul>
+            <li class="button"><a href="#" class="box">Home</a></li>
+            <li class="button"><a href="#summary" class="box">About</a></li>
+            <li class="button"><a href="#skills" class="box">Skills</a></li>
+            <li class="button"><a href="#contact" class="box">Contact</a></li>
+        </ul>
+    </header>
+
+    <div class="links">
+        <a class="social-link1" href="" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="1em" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+        </a>
+        <a class="social-link2" href="" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#fff"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>          
+        </a>
+
+      </div>             
+
+    <main>
+        <div class="intro">
+            <p class="introtext">Hi there 👋,</p>
+            <p class="introtext">I'm <span class="name1"></span> <span class="name2"></span></p>
+            <p class="introtext">I'm a <span class="role"></span></p>
+        </div>
+
+        <div class="summary" id="summary">
+            <p class="summaryheading">About me</p>
+            <hr class="aboutmeunderline">
+            <p class="summarycontent"><img src="user.jpg" alt="Pineapple"></p>
+        </div>
+
+        <div class="skills" id="skills">
+            <p class="skillsheading">Skills</p>
+            <hr class="skillunderline">
+            <ul class="skilllist" id="skilllist"> </ul>
+        </div>
+
+        <div class="contact" id="contact">
+            <p class="contactheading">Contact</p>
+            <hr class="contactunderline">
+            <p class="contactcontent">
+                Calling all codebreakers! Let's crack the code on groundbreaking ideas.  My secret decoder ring awaits your message at <a href="" class="email" id="emailtag" target="_blank"><span class="name3"></span> <span class="name4"></span></a>.  Together, we can unlock the hidden potential of your project!
+            </p>
+        </div>
+
+    </main>
+    <script>
+     document.addEventListener("DOMContentLoaded", function() {
+            const fnameData = localStorage.getItem('fname');
+            const lnameData = localStorage.getItem('lname');
+            if (fnameData) {
+                const fname = fnameData; 
+                const lname = lnameData; 
+                const fnametag = document.querySelector('.fname');
+                const lnametag = document.querySelector('.lname');
+                const name1tag = document.querySelector('.name1');
+                const name2tag = document.querySelector('.name2');
+                fnametag.textContent = fname;
+                lnametag.textContent = lname;
+                name1tag.textContent = fname;
+                name2tag.textContent = lname;
+            }
+    
+            const croleData = localStorage.getItem('crole');
+            if (croleData) {
+                const crole =croleData; 
+                const croletag = document.querySelector('.role');
+                croletag.textContent = crole;
+            }
+        
+
+    
+            const summaryData = localStorage.getItem('summary');
+            if (summaryData) {
+                const summary =summaryData; 
+                const summarytag = document.querySelector('.summarycontent');
+                summarytag.textContent = summary;
+            }
+        
+
+            const skillsData = localStorage.getItem('skillsValues');
+              if (skillsData) {
+            const skills = JSON.parse(skillsData);
+            const skillsList = document.getElementById('skilllist');
+            skills.forEach(skill => {
+             const li = document.createElement('li');
+             li.textContent = skill;
+            skillsList.appendChild(li);
+                                    });
+            }
+
+    
+            const mailData = localStorage.getItem('email');
+            if (mailData) {
+                const mail =mailData; 
+                const mailtag = document.querySelector('.email');
+                mailtag.textContent = mail;
+                var mailtoUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(mail);
+                mailtag.setAttribute('href', mailtoUrl);
+            }
+
+            const githubData = localStorage.getItem('github');
+            if (githubData) {
+                const github =githubData; 
+                const githubtag = document.querySelector('.social-link1');
+                githubtag.setAttribute('href', github);
+            }
+
+            const linkedinData = localStorage.getItem('linkedin');
+            if (linkedinData) {
+                const linkedin =linkedinData; 
+                const linkedintag = document.querySelector('.social-link2');
+                linkedintag.setAttribute('href',linkedin);
+            }
+    });
+
+    function download(){
+                const downloadBtn = document.getElementById('download-btn pixel-corners');
+
+                downloadBtn.style.display = 'none';
+                
+                const htmlContent = document.documentElement.outerHTML;
+                const blob = new Blob([htmlContent], { type: 'text/html' });
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = 'portfolio.html';
+                
+                // Trigger the download
+                document.body.appendChild(link);
+                link.click();
+                
+                // Clean up: re-attach the download button and remove the temporary link
+                document.body.removeChild(link);
+                downloadBtn.style.display = 'block';
+
+                // Specify the path to the file
+                var filePath = '/portfolio/portfolio1style.css';
+    
+                // Create a new anchor element
+                var downloader = document.createElement('a');
+    
+                // Set the download attribute and URL for the anchor element
+                downloader.setAttribute('download', '');
+                downloader.setAttribute('href', filePath);
+    
+                // Trigger a click event on the anchor element
+                downloader.click();
+                
+            }
+
+    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resume</title>
+    <link rel="stylesheet" href="resume1style.css">
+</head>
+<body>
+    <div class="backbutton" >
+        <button class="backbtn" onclick="window.location.href='/forms/form1.html'">
+            <div class="button-box" >
+              <span class="button-elem">
+                <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                  ></path>
+                </svg>
+              </span>
+              <span class="button-elem">
+                <svg viewBox="0 0 46 40">
+                  <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+          </button>  
+    </div>
+    <div class="container">
+        <header>
+            <div class="name">
+                <h2 class="name1"></h2>
+                <h2 class="name2"></h2>
+            </div>
+            <h2 class="role">Student</h2>
+            <div class="contact">
+                <ul class="contactlist">
+                    <li class="number"></li>
+                    <li class="mail"></li>
+                    <li class="address"></li>
+                </ul>
+            </div>
+    
+            <hr class="hr1">
+    
+            <div class="links">
+                <ul class="social">
+                    <li><img src="git.png" alt="" class="gitimg"><span class="githublink"></span></li>
+                    <li><img src="linkedin.png" alt="" class="linkedinimg"><span class="linkedinlink"></span></li>
+                </ul>
+            </div>
+        </header>
+    
+        <main>
+            <div class="summary">
+                <h1 class="heading">Summary</h1>
+                <hr class="hr2">
+                <p class="summarycontent"></p>
+            </div>
+    
+            <div class="skills">
+                <h1 class="heading">Skills</h1>
+                <hr class="hr2">
+                <ul class="skillslist" id="skillslist"> </ul>
+            </div>
+    
+            <div class="education">
+                <h1 class="heading">Education</h1>
+                <hr class="hr2">
+                <div class="edu">
+                    <div class="educontent">
+                        <div class="educontent1">
+                            <p class="university"></p>
+                            <p class="course"> </p>
+                        </div>
+        
+                        <div class="educontent2">
+                            <p class="location"></p>
+                            <p class="timespan"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="certificates">
+                <h1 class="heading">Certificates</h1>
+                <hr class="hr2">
+                <ul class="certificateslist" id="certificateslist"></ul>
+            </div>
+    
+            <div class="intrest">
+                <h1 class="heading">Interests and Hobbies</h1>
+                <hr class="hr2">
+                        <ul class="intrestlist" id="intrestlist"></ul>
+            </div>
+    
+            <div class="languages">
+                <h1 class="heading">Languages Spoken</h1>
+                <hr class="hr2">
+                <ul class="languageslist" id="languageslist"></ul>
+            </div>
+        </main>
+    
+        <footer></footer>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const fnameData = localStorage.getItem('fname');
+            if (fnameData) {
+                const fname = fnameData; 
+                const fnametag = document.querySelector('.name1');
+                fnametag.textContent = fname;
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const lnameData = localStorage.getItem('lname');
+            if (lnameData) {
+                const lname = lnameData; 
+                const lnametag = document.querySelector('.name2');
+                lnametag.textContent = lname;
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const numberData = localStorage.getItem('contactNumber');
+            if (numberData) {
+                const number = numberData; 
+                const numbertag = document.querySelector('.number');
+                numbertag.textContent = number;
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const croleData = localStorage.getItem('crole');
+            if (croleData) {
+                const crole =croleData; 
+                const croletag = document.querySelector('.role');
+                croletag.textContent = crole;
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const mailData = localStorage.getItem('email');
+            if (mailData) {
+                const mail =mailData; 
+                const mailtag = document.querySelector('.mail');
+                mailtag.textContent = mail;
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const addrressData = localStorage.getItem('address');
+            if (addrressData) {
+                const addrress =addrressData; 
+                const addrresstag = document.querySelector('.address');
+                addrresstag.textContent = addrress;
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const githubData = localStorage.getItem('github');
+            if (githubData) {
+                const github =githubData; 
+                const githubtag = document.querySelector('.githublink');
+                githubtag.textContent = github;
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const linkedinData = localStorage.getItem('linkedin');
+            if (linkedinData) {
+                const linkedin =linkedinData; 
+                const linkedintag = document.querySelector('.linkedinlink');
+                linkedintag.textContent = linkedin;
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const summaryData = localStorage.getItem('summary');
+            if (summaryData) {
+                const summary =summaryData; 
+                const summarytag = document.querySelector('.summarycontent');
+                summarytag.textContent = summary;
+            }
+        });
+
+        const skillsData = localStorage.getItem('skillsValues');
+              if (skillsData) {
+            const skills = JSON.parse(skillsData);
+            const skillsList = document.getElementById('skillslist');
+            skills.forEach(skill => {
+             const li = document.createElement('li');
+             li.textContent = skill;
+            skillsList.appendChild(li);
+                                    });
+         }
+
+        const universityData = localStorage.getItem('universityValues');
+        const courseData = localStorage.getItem('courseValues');
+        const yearData = localStorage.getItem('yearValues');
+        const locationData = localStorage.getItem('locationValues');
+            if (universityData) {
+                const universityname = JSON.parse(universityData);
+                const coursename = JSON.parse(courseData);
+                const yearname = JSON.parse(yearData);
+                const locationname = JSON.parse(locationData);
+                console.log(universityname,coursename,yearname,locationname);
+
+                const education1List = document.querySelector('.educontent1');
+                const education2List = document.querySelector('.educontent2');
+
+                for (let i = 0; i < universityname.length; i++) {
+                const uni = universityname[i];
+                const cou = coursename[i];
+                const loc = locationname[i];
+                const time = yearname[i];
+                const puni = document.createElement('p');
+                const pcou = document.createElement('p');
+                const ploc = document.createElement('p');
+                const ptime = document.createElement('p');
+
+                puni.textContent = uni;
+                pcou.textContent = cou;
+                ploc.textContent = loc;
+                ptime.textContent = time;
+
+                puni.setAttribute('class', 'university');
+                pcou.setAttribute('class', 'course');
+                ploc.setAttribute('class', 'location');
+                ptime.setAttribute('class', 'timespan');
+
+                education1List.appendChild(puni);
+                education1List.appendChild(pcou);
+                education2List.appendChild(ploc);
+                education2List.appendChild(ptime);
+                }
+        }
+            
+        const certificatesData = localStorage.getItem('certificateValues');
+              if (certificatesData) {
+            const Certificates = JSON.parse(certificatesData);
+            const certificatelist = document.getElementById('certificateslist');
+            Certificates.forEach(certificate => {
+             const li = document.createElement('li');
+             li.textContent = certificate;
+            certificatelist.appendChild(li);
+                                    });
+        }
+        
+        const iandhData = localStorage.getItem('iandhValues');
+              if (iandhData) {
+            const iandhs = JSON.parse(iandhData);
+            const iandhlist = document.getElementById('intrestlist');
+            iandhs.forEach(iandh => {
+             const li = document.createElement('li');
+             li.textContent = iandh;
+            iandhlist.appendChild(li);
+                                    });
+        }
+
+
+        const languageData = localStorage.getItem('languageValues');
+              if (languageData) {
+            const languages = JSON.parse(languageData);
+            const languagelist = document.getElementById('languageslist');
+            languages.forEach(language => {
+             const li = document.createElement('li');
+             li.textContent = language;
+            languagelist.appendChild(li);
+                                    });
+        }
+
+
+    </script>
+
+    <div class="downloadbtn">
+        <button class="download-btn pixel-corners">
+            <div class="button-content">
+              <div class="svg-container">
+                <svg
+                  class="download-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479 6.908l-4-4h3v-4h2v4h3l-4 4z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="text-container">
+                <div class="text">Download</div>
+              </div>
+            </div>
+          </button>
+          
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+     const generateButton = document.querySelector('.download-btn');
+     generateButton.addEventListener('click', generatePdf);
+     });
+ 
+     function generatePdf() {
+     const element = document.querySelector('.container');
+     html2pdf()
+         .from(element)
+         .save('resume.pdf');
+     }
+ 
+     </script>
+</body>
+</html>
